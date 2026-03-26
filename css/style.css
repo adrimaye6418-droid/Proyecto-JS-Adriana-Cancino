@@ -1,0 +1,264 @@
+/*reset*/
+body {
+    font-family: montserrat, sans-serif;
+    background: linear-gradient(#79ae92);
+}
+
+/*Header*/
+
+.header-usuario {
+    display: flex;
+    min-height: 70px;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#001f36;
+    padding: 10px;
+}
+
+.header-usuario h1 {
+    color: azure;
+}
+
+
+.header-usuario a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.header-usuario nav a { 
+    font-weight: 600;
+    padding-right: 10px;
+    color: azure;
+}
+
+.header-usuario nav a:hover {
+    color: #060607;
+}
+
+
+/*section imagen inicial*/
+.botton {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 5px solid #ffff;
+    flex-wrap: wrap;
+    color: azure;
+    background-color: #001f36;
+}
+
+.P1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/*main*/
+.h2 {
+    color: #000 !important;
+    font-size: 24px;
+    text-align: center;
+}
+.gallery {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+align-content: space-around;
+justify-content: end;
+justify-items: center;
+gap: 10px;
+}
+
+.img-div {
+    width: 320px;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 20px, 20px, 0px, 0px;
+}
+.mainbutton {
+    padding: 5px 10px;
+    background-color: #001f36;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+.mainbutton:hover {
+    background-color: #0cdfa0;
+} 
+
+
+
+
+/*Footer*/
+
+.footer-usuario {
+    display: flex;
+    min-height: 70px;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#001f36;
+    padding: 10px;
+    color: azure;
+}
+
+.footer-usuario div {
+  text-decoration: none;
+  color: azure;
+  font-size: 1.2rem;
+}
+
+.footer-div {
+  color: azure
+}
+/*Estilos de usuario*/
+
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 425px;
+  background: #1c5560;
+  border-radius: 10px;
+}
+
+.formulario h3 {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #86F0D6;
+  color: azure;
+}
+
+.formulario form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.formulario label {
+  color: azure;
+  font-size: 16px;
+  padding: 15px 0 5px 0;
+}
+
+form .username {
+  position: relative;
+  border-bottom: 2px solid #86F0D6;
+  margin: 30px 0;
+}
+
+.username input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.username label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  color: azure;
+}
+
+.username spam::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: .5s;
+}
+
+.username input:focus ~ label,
+.username input:focus ~ label {
+  top: -5px;
+  color: azure;
+}
+
+.username input:focus ~ spam::before,
+.username input:focus ~ spam::before {
+  width: 100%;
+}
+
+.recordar {
+  margin: 10px 0 20px 5px;
+  color: rgb(3, 3, 3);
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+}
+
+.recordar:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid white;
+  background: #5f6e6b;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+input[type="submit"]:hover {
+  border-color: #202423; ;
+  transition: .5s;
+}
+
+.registrarse {
+  margin: 20px 0;
+  text-align: center;
+  color: azure;
+}
+
+.registrarse a {
+  color: rgb(5, 5, 5);
+  font-size: 20px;
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 700px){
+    .header-usuario {
+        flex-direction: column;
+    }
+    .header-usuario nav {
+        padding:  10px 0; 
+    }
+}
+
+@media (max-width: 375px){
+    .gallery{ 
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+    .gallery{ 
+        grid-template-columns: 2r;
+    }
+}
+
+@media (max-width: 600px){
+    .gallery-tienda{ 
+        grid-template-columns: 1fr;
+    }
+}
