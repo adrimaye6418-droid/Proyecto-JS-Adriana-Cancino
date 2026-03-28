@@ -49,7 +49,7 @@ function actualizarTotales() {
     totales.innerHTML = `
     <p>Total Cantidad <span id="cantidad">${totalCantidad}</span></p>
     <p>Total Precio:$ <span id="precio">${totalPrecio}</span></p>
-    <button class="finalizarcompra" id="finalizocompra"> Finalizar Compra</button>
+    <button class="finalizarcompra" id="finalizoCompra"> Finalizar Compra</button>
     `;
     totales.hidden = false;
 }
@@ -72,64 +72,3 @@ function eliminarProducto(id) {
 
     location.reload();
 }
-/* formulario dinamico - Finalizar compra*/
-
-/*function finalizarCompra() {
-  swal.fire({
-    title: '¿Desea finalizar su compra?',
-    showCancelButton: true,
-    confirmButtonText: 'Sí, finalizar',
-    cancelButtonText: 'No, cancelar compra',}).then((result) => {
-      if (result.isConfirmed) {
-        result.isConfirmed.addEventListener("click", function() {
-          const formulario = document.getElementById("formulario");
-          formulario.hidden = false;
-        });
-        }
-        if (result.isDismissed) {
-        result.isDismissed.addEventListener("click", function() {
-          finalizarCompra();
-        }); 
-      }
-    }
-      )};
-
-finalizarCompra();
-    
-    localStorage.clear();
-    location.reload();*/
-
-
-
-function finalizarCompra() {
-  Swal.fire({
-    title: '¿Desea finalizar su compra?',
-    showCancelButton: true,
-    confirmButtonText: 'Sí, finalizar',
-    cancelButtonText: 'No, cancelar compra'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // Mostrar formulario
-      const formulario = document.getElementById('formulario');
-      if (formulario) {
-        formulario.hidden = false;
-      }
-      // Si quieres limpiar el carrito y recargar solo cuando confirma:
-      localStorage.clear();
-      // Opcional: mostrar un mensaje de éxito antes de recargar
-      Swal.fire('Compra finalizada', 'Gracias por su compra', 'success').then(() => {
-        location.reload();
-      });
-    } else if (result.isDismissed) {
-      // El usuario canceló: no hacer nada o mostrar mensaje
-      // Por ejemplo, simplemente volver a la página o mantener el estado actual
-      console.log('Usuario canceló la compra');
-    }
-  });
-}
-
-
-// Llamar a la función cuando corresponda, por ejemplo al hacer click en un botón
-// finalizarCompra();
-
-      
