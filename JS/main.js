@@ -60,6 +60,7 @@ botonesComprar.forEach(boton => {
     const idSeleccionado = e.currentTarget.id;
     const productoSelect = articulos.find(articulo => articulo.id === Number(idSeleccionado));
     agregarAlCarrito(productoSelect);
+    Swal.fire("Producto agregado al carrito", "", "success");
   })
 });
 
